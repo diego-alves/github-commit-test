@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "github-commit-test"
+version = "0.0.1"
+description = "This project consumes a SQS Queue"
+authors = ["Diego Alves <dfqalves@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.scripts]
+consume = 'github_commit_test.main:main'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.17.57"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^21.4b0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
